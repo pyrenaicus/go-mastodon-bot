@@ -26,6 +26,14 @@ func main() {
 
 	authError := c.Authenticate(context.Background(), envs["APP_USER"], envs["APP_PASSWORD"])
 	if authError != nil {
-		fmt.Println("Authentication error")
+		log.Fatalf("Authentication error: %v", authError)
+	}
+
+	timeline, err := c.GetTimelineHome(context.Background(), nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+	for i := len(timeline) - 1; i >= 0; i-- {
+		fmt.Println(timeline[i])
 	}
 }
