@@ -10,3 +10,6 @@ https://github.com/joho/godotenv
 
 go mod init mastobot
 go get github.com/BurntSushi/toml
+...
+go mod tidy
+go run .
