@@ -6,5 +6,7 @@ https://github.com/mattn/go-mastodon
 
 https://github.com/BurntSushi/toml
 
+https://github.com/joho/godotenv
+
 go mod init mastobot
 go get github.com/BurntSushi/toml
